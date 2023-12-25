@@ -1,36 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Supply Chain Data Transmission Process
 
-## Getting Started
 
-First, run the development server:
+Steps:
+  1. Create a 32bit hex key which will be available in both customer and supplier end.
+  2. Customer ➡️ get data ➡️ encrypt data using the key (AES Encryption)➡️ Hash the data (md5) ➡️ (encrypted+hashed data ) send to supplier/admin.
+  3. Supplier received encrypted data ➡️ decrypt using the key ➡️ get decrypted data () ➡️ generate hash code and compare it with received hash code to check the authenticity.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Video Link: https://drive.google.com/drive/folders/1Akt7zMDACfsytwGiVaNutgju7Fo23kTV?usp=sharing
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Live Preview: https://supply-chain-two.vercel.app/
